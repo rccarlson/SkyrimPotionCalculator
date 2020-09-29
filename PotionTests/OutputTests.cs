@@ -7,13 +7,16 @@ namespace PotionTests
     [TestClass]
     public class OutputTests
     {
+
+
         [TestMethod]
         public void ResistFrostPotionTest()
         {
             Potion resistFrost = new Potion(new Ingredient[] {
                 Ingredient.GetIngredient("Purple Mountain Flower"),
                 Ingredient.GetIngredient("Thistle Branch")
-            });
+            },
+            perks: new PerkConfiguration(AlchemySkill:100, FortifyAlchemy: 0));
             //Value: 86
             //Magnitude: 18
             //Duration: 60
@@ -26,7 +29,7 @@ namespace PotionTests
             Potion damageHealthPotion = new Potion(new Ingredient[] {
                 Ingredient.GetIngredient("Jarrin Root"),
                 Ingredient.GetIngredient("Falmer Ear")
-            });
+            }, perks: new PerkConfiguration(AlchemySkill: 100));
             //Value: 86
             //Magnitude: 18
             //Duration: 60

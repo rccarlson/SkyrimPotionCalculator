@@ -95,5 +95,16 @@ namespace InputTests
 				}
 
 		}
+
+		/// <summary>
+		/// Check that no effects are tagged as both beneficial and poisonous
+		/// </summary>
+		[TestMethod]
+		public void IngredientEffectCategoryCheck()
+		{
+			foreach (MagicEffect eff in MagicEffect._allMagicEffects)
+				if (eff.beneficial)
+					Assert.IsFalse(eff.poisonous, $"Magic effect {eff.Name} is both beneficial and poisonous");
+		}
 	}
 }

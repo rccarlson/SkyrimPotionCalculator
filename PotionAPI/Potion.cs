@@ -9,12 +9,15 @@ namespace PotionAPI
 	public class Potion
 	{
 		public readonly Ingredient[] ingredients;
+		public readonly List<AlchemyEffect> ingredientEffects;
 		public readonly List<PotionEffect> effects;
+		public readonly PerkConfiguration perks;
 
-		public Potion(Ingredient[] ingredients)
+		public Potion(Ingredient[] ingredients, PerkConfiguration perks)
 		{
 			this.ingredients = ingredients;
-			var relevantAlchEffects = ProcessIngredients(ingredients);
+			this.perks = perks;
+			ingredientEffects = ProcessIngredients(ingredients);
 		}
 
 		/// <summary>

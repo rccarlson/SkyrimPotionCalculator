@@ -92,6 +92,7 @@ namespace PotionAPI
 		/// <returns>Ingredient matching the <paramref name="name"/> if successful. Null if unsuccessful</returns>
 		public static Ingredient GetIngredient(string name)
 			=> _allIngredients.Find(i => i.Name == name);
+		//TODO: Make more efficient by creating a dictionary
 		
 	}
 }
