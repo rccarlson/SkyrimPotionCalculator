@@ -105,6 +105,8 @@ namespace InputTests
 			foreach (MagicEffect eff in MagicEffect._allMagicEffects)
 				if (eff.beneficial)
 					Assert.IsFalse(eff.poisonous, $"Magic effect {eff.Name} is both beneficial and poisonous");
+				else
+					Assert.IsTrue(eff.poisonous, $"Magic effect {eff.Name} is neither beneficial nor poisonous");
 		}
 	}
 }

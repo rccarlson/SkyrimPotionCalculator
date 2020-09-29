@@ -12,12 +12,14 @@ namespace PotionAPI
 		public readonly List<AlchemyEffect> ingredientEffects;
 		public readonly List<PotionEffect> effects;
 		public readonly PerkConfiguration perks;
+		internal readonly int highestValueEffectIndex;
 
 		public Potion(Ingredient[] ingredients, PerkConfiguration perks)
 		{
 			this.ingredients = ingredients;
 			this.perks = perks;
 			ingredientEffects = ProcessIngredients(ingredients);
+			highestValueEffectIndex = GetMaxValueIndex(ingredientEffects);
 		}
 
 		/// <summary>
@@ -43,6 +45,23 @@ namespace PotionAPI
 
 			return potionEffects;
 		}
+
+		internal int GetMaxValueIndex(List<AlchemyEffect> ingredientEffects)
+        {
+			int index = 0, max = 0;
+			for(int i = 0; i < ingredientEffects.Count; i++)
+            {
+				if(ingredientEffects[i].value>max)
+                {
+					index = i;
+					max = ingredientEffects[i].value;
+                }
+            }
+			return index;
+        }
+
+		public bool IsPotion => ingredientEffects[highestValueEffectIndex].beneficial;
+		public bool IsPoison => ingredientEffects[highestValueEffectIndex].poisonous;
 
 		public class PotionEffect
 		{
