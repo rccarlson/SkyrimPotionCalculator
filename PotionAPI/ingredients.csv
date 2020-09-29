@@ -1,0 +1,111 @@
+Ingredient,Effect 1: Name,Effect 1: Magnitude,Effect 1: Duration,Effect 1: Value,Effect 2: Name,Effect 2: Magnitude,Effect 2: Duration,Effect 2: Value,Effect 3: Name,Effect 3: Magnitude,Effect 3: Duration,Effect 3: Value,Effect 4: Name,Effect 4: Magnitude,Effect 4: Duration,Effect 4: Value,Weight ,Value ,Obtained
+Abecean Longfin,Weakness to Frost,3,30,5,Fortify Sneak,4,60,16,Weakness to Poison,2,30,7,Fortify Restoration,4,60,16,0.5,15,"Lakes, rivers, streams, fish barrels"
+Ancestor Moth Wing,Damage Stamina,3,0,6,Fortify Conjuration,5,60,10,Damage Magicka Regen,100,5,36,Fortify Enchanting,1,30,2,0.1,2,Ancestor Glade
+Ash Creep Cluster,Damage Stamina,3,0,6,Invisibility,0,4,36,Resist Fire,3,60,12,Fortify Destruction,5,6,21,0.3,20,Harvested from ash covered areas of Solstheim
+Ash Hopper Jelly,Restore Health,5,0,2,Fortify Light Armor,2,60,7,Resist Shock,3,60,12,Weakness to Frost,3,30,5,0.3,20,Ash Hopper Corpses
+Ashen Grass Pod,Resist Fire,4,60,16,Weakness to Shock,3,30,7,Fortify Lockpicking,2,30,3,Fortify Sneak,4,60,16,0.1,1,Harvested from ash covered areas of Solstheim
+Bear Claws,Restore Stamina,4,0,2,Fortify Health,4,60,11,Fortify One-Handed,4,60,16,Damage Magicka Regen,100,5,36,0.1,2,"Bears, Cave Bears"
+Bee,Restore Stamina,5,0,3,Ravage Stamina,2,10,3,Regenerate Stamina,5,300,24,Weakness to Shock,3,30,7,0.1,3,Beehive
+Beehive Husk,Resist Poison,2,60,7,Fortify Light Armor,2,60,7,Fortify Sneak,2,60,7,Fortify Destruction,5,60,21,1,5,Beehive
+Bleeding Crown,Weakness to Fire,3,30,6,Fortify Block,4,60,16,Weakness to Poison,2,30,7,Resist Magic,1,60,7,0.3,10,Mushroom clusters
+Blisterwort,Damage Stamina,3,0,6,Frenzy,1,10,15,Restore Health,3,0,1,Fortify Smithing,4,30,11,0.2,12,Caves and dark areas
+Blue Butterfly Wing,Damage Stamina,3,0,6,Fortify Conjuration,5,60,10,Damage Magicka Regen,100,5,36,Fortify Enchanting,1,30,2,0.1,2,Blue Butterfly
+Blue Dartwing,Resist Shock,3,60,12,Fortify Pickpocket,4,60,16,Restore Health,5,0,2,Fear,1,30,16,0.1,1,Hovering above water
+Blue Mountain Flower,Restore Health,5,0,2,Fortify Conjuration,5,60,10,Fortify Health,4,60,11,Damage Magicka Regen,100,5,36,0.1,2,Mountain flower clumps
+Boar Tusk,Fortify Stamina,5,300,74,Fortify Health,4,300,67,Fortify Block,4,60,16,Frenzy,1,10,15,0.5,20,Tusked Bristlebacks
+Bone Meal,Damage Stamina,3,0,6,Resist Fire,3,60,12,Fortify Conjuration,5,60,10,Ravage Stamina,2,10,3,0.5,5,Draugr and skeletons
+Briar Heart,Restore Magicka,5,0,3,Fortify Block,2,60,7,Paralysis,0,1,39,Fortify Magicka,4,60,9,0.5,20,Forsworn Leaders
+Burnt Spriggan Wood,Weakness to Fire,3,30,6,Fortify Alteration,4,60,6,Damage Magicka Regen,100,5,36,Slow,50,5,34,0.5,20,Burnt Spriggans
+Butterfly Wing,Restore Health,5,0,2,Fortify Barter,1,30,6,Lingering Damage Stamina,1,10,1,Damage Magicka,3,0,7,0.1,3,Monarch Butterfly
+Canis Root,Damage Stamina,3,0,6,Fortify One-Handed,4,60,16,Fortify Marksman,4,60,16,Paralysis,0,1,39,0.1,5,Near rocky areas
+Charred Skeever Hide,Restore Stamina,5,0,3,Cure Disease,2,0,1,Resist Poison,4,60,16,Restore Health,5,0,2,0.5,1,Found at campfires
+Chaurus Eggs,Weakness to Poison,2,30,7,Fortify Stamina,4,60,9,Damage Magicka,3,0,7,Invisibility,0,4,36,0.2,10,Falmer caves
+Chaurus Hunter Antennae,Damage Stamina,3,0,6,Fortify Conjuration,5,60,10,Damage Magicka Regen,100,5,36,Fortify Enchanting,1,30,2,0.1,2,"Chaurus Hunter, Chaurus Hunter Fledgling"
+Chicken's Egg,Resist Magic,1,60,7,Damage Magicka Regen,100,5,36,Waterbreathing,0,5,13,Lingering Damage Stamina,1,10,1,0.5,2,Chicken's Nest
+Creep Cluster,Restore Magicka,5,0,3,Damage Stamina Regen,100,5,22,Fortify Carry Weight,4,300,29,Weakness to Magic,2,30,7,0.2,1,Hydro-thermal areas
+Crimson Nirnroot,Damage Health,6,1,1,Damage Stamina,9,0,20,Invisibility,0,4,36,Resist Magic,1,60,7,0.2,10,Blackreach
+Cyrodilic Spadetail,Damage Stamina,3,0,6,Fortify Restoration,4,60,16,Fear,1,30,16,Ravage Health,2,10,0,0.3,15,"Lakes, rivers, streams, fish barrels"
+Daedra Heart,Restore Health,5,0,2,Damage Stamina Regen,100,5,22,Damage Magicka,3,0,7,Fear,1,30,16,0.5,250,Daedra
+Deathbell,Damage Health,3,1,0,Ravage Stamina,2,20,7,Slow,50,5,34,Weakness to Poison,2,30,7,0.1,4,"Wild, on planters"
+Dragon's Tongue,Resist Fire,3,60,12,Fortify Barter,1,30,6,Fortify Illusion,1,60,2,Fortify Two-Handed,4,60,16,0.1,5,Hydro-thermal areas
+Dwarven Oil,Weakness to Magic,2,30,7,Fortify Illusion,4,60,13,Regenerate Magicka,5,300,24,Restore Magicka,5,0,3,0.3,15,Dwemer Ruins
+Ectoplasm,Restore Magicka,5,0,3,Fortify Destruction,4,60,16,Fortify Magicka,4,60,9,Damage Health,2,1,0,0.1,25,Ghostlike creatures
+Elves Ear,Restore Magicka,5,0,3,Fortify Marksman,4,60,16,Weakness to Frost,2,30,3,Resist Fire,3,30,5,0.1,10,"Plant, hanging herbs"
+Emperor Parasol Moss,Damage Health,3,0,10,Fortify Magicka,4,60,9,Regenerate Health,5,300,24,Fortify Two-Handed,4,60,16,0.3,1,Hanging from Emperor Parasol around Tel Mithryn.
+Eye of Sabre Cat,Restore Stamina,5,0,3,Ravage Health,2,10,0,Damage Magicka,3,0,7,Restore Health,5,0,2,0.1,2,"Sabre Cat, Snowy Sabre Cat"
+Falmer Ear,Damage Health,2,1,0,Frenzy,1,10,15,Resist Poison,4,60,16,Fortify Lockpicking,2,30,3,0.2,10,Falmer
+Felsaad Tern Feathers,Restore Health,1,0,0,Fortify Light Armor,2,60,7,Cure Disease,5,0,2,Resist Magic,1,60,7,0.1,15,Felsaad Tern
+Fire Salts,Weakness to Frost,3,30,5,Resist Fire,3,60,12,Restore Magicka,5,0,3,Regenerate Magicka,5,300,24,0.3,50,Flame Atronach
+Fly Amanita,Resist Fire,3,60,12,Fortify Two-Handed,4,60,16,Frenzy,1,10,15,Regenerate Stamina,5,300,24,0.1,2,Mushroom clusters in and around caves
+Frost Mirriam,Resist Frost,3,60,12,Fortify Sneak,4,60,16,Ravage Magicka,2,10,2,Damage Stamina Regen,100,5,22,0.1,1,"Hanging in homes, businesses and giant camps"
+Frost Salts,Weakness to Fire,3,30,6,Resist Frost,30,60,12,Restore Magicka,5,0,3,Fortify Conjuration,5,60,10,0.3,100,Frost Atronach
+Garlic,Resist Poison,4,60,16,Fortify Stamina,4,60,9,Regenerate Magicka,5,300,24,Regenerate Health,5,300,24,0.3,1,"Hanging in homes, businesses and cooking areas"
+Giant Lichen,Weakness to Shock,3,30,7,Ravage Health,2,10,0,Weakness to Poison,2,30,7,Restore Magicka,5,0,3,0.3,5,Swamps
+Giant's Toe,Damage Stamina,3,0,6,Fortify Health,4,300,67,Fortify Carry Weight,4,300,29,Damage Stamina Regen,100,5,22,1,20,Giants
+Gleamblossom,Resist Magic,1,60,7,Fear,1,30,16,Regenerate Health,5,300,24,Paralysis,0,1,39,0.1,5,"Harvested in Darkfall Cave, Forgotten Vale"
+Glow Dust,Damage Magicka,3,0,7,Damage Magicka Regen,100,5,36,Fortify Destruction,5,60,21,Resist Shock,3,60,12,0.5,20,Wispmother
+Glowing Mushroom,Resist Shock,3,60,12,Fortify Destruction,5,60,21,Fortify Smithing,4,30,11,Fortify Health,4,60,11,0.2,5,"Caves, Dwemer Ruins"
+Grass Pod,Resist Poison,4,60,16,Ravage Magicka,2,10,2,Fortify Alteration,4,60,6,Restore Magicka,5,0,3,0.1,1,Tundras
+Hagraven Claw,Resist Magic,1,60,7,Lingering Damage Magicka,1,10,10,Fortify Enchanting,1,30,2,Fortify Barter,1,30,6,0.3,20,Hagraven
+Hagraven Feathers,Damage Magicka,3,0,7,Fortify Conjuration,5,60,10,Frenzy,1,10,15,Weakness to Shock,3,30,7,0.1,20,Hagraven
+Hanging Moss,Damage Magicka,3,0,7,Fortify Health,4,60,11,Damage Magicka Regen,100,5,36,Fortify One-Handed,4,60,16,0.3,1,"Vegetated areas, hanging in caves, from buildings"
+Hawk Beak,Restore Stamina,5,0,3,Resist Frost,3,60,12,Fortify Carry Weight,4,300,29,Resist Shock,3,60,12,0.3,15,Hawks
+Hawk Feathers,Cure Disease,2,0,1,Fortify Light Armor,2,60,7,Fortify One-Handed,4,60,16,Fortify Sneak,4,60,16,0.1,15,Hawks
+Hawk's Egg,Resist Magic,1,60,7,Damage Magicka Regen,100,5,36,Waterbreathing,0,5,13,Lingering Damage Stamina,1,10,1,0.5,2,Hawk's Nest
+Histcarp,Restore Stamina,5,0,3,Fortify Magicka,4,60,9,Damage Stamina Regen,100,5,22,Waterbreathing,0,5,13,0.3,6,"Lakes, rivers, streams and fish barrels"
+Honeycomb,Restore Stamina,5,0,3,Fortify Block,2,60,7,Fortify Light Armor,2,60,7,Ravage Stamina,2,10,3,1,5,Beehive
+Human Flesh,Damage Health,2,1,0,Paralysis,0,1,39,Restore Magicka,5,0,3,Fortify Sneak,4,60,16,0.3,1,Falmer Vampire dens
+Human Heart,Damage Health,2,1,0,Damage Magicka,3,0,7,Damage Magicka Regen,100,5,36,Frenzy,1,10,15,1,0,Falmer Vampire dens
+Ice Wraith Teeth,Weakness to Frost,3,30,5,Fortify Heavy Armor,2,60,7,Invisibility,0,4,36,Weakness to Fire,3,30,6,0.3,30,Ice Wraith
+Imp Stool,Damage Health,2,1,0,Lingering Damage Health,1,10,12,Paralysis,0,1,39,Restore Health,3,0,1,0.3,0,Mushroom clusters near caves or dungeons
+Jarrin Root,Damage Health,200,1,80,Damage Magicka,3,0,7,Damage Stamina,3,0,6,Damage Magicka Regen,100,5,36,0.5,10,Dark Brotherhood quest
+Jazbay Grapes,Weakness to Magic,2,30,7,Fortify Magicka,4,60,9,Regenerate Magicka,5,300,24,Ravage Health,2,10,0,0.2,1,Hydro-thermal regions
+Juniper Berries,Weakness to Fire,3,30,6,Fortify Marksman,4,60,16,Regenerate Health,5,300,24,Damage Stamina Regen,100,5,22,0.1,1,Juniper Trees
+Large Antlers,Restore Stamina,5,0,3,Fortify Stamina,4,60,9,Slow,5,30,19,Damage Stamina Regen,100,5,22,0.1,2,"Deer, Elk"
+Lavender,Resist Magic,1,60,7,Fortify Stamina,4,60,9,Ravage Magicka,2,10,2,Fortify Conjuration,4,60,8,0.1,1,Outdoors in clumps
+Luna Moth Wing,Damage Magicka,3,0,7,Fortify Light Armor,2,60,7,Regenerate Health,5,300,24,Invisibility,0,4,36,0.1,5,Luna Moth
+Moon Sugar,Weakness to Fire,3,30,6,Resist Frost,3,60,12,Restore Magicka,5,0,3,Regenerate Magicka,5,300,24,0.3,50,Khajiit Caravans
+Mora Tapinella,Restore Magicka,5,0,3,Lingering Damage Health,1,10,12,Regenerate Stamina,5,300,24,Fortify Illusion,4,60,13,0.3,4,Dead Trees
+Mudcrab Chitin,Restore Stamina,5,0,3,Cure Disease,5,0,2,Resist Poison,4,60,16,Resist Fire,3,60,12,0.3,2,Mudcrabs
+Namira's Rot,Damage Magicka,3,0,7,Fortify Lockpicking,2,30,3,Fear,1,30,16,Regenerate Health,5,300,24,0.3,0,Caves
+Netch Jelly,Paralysis,0,1,39,Fortify Carry Weight,4,300,29,Restore Stamina,10,0,7,Fear,1,30,16,0.5,20,Netch
+Nightshade,Damage Health,2,1,0,Damage Magicka Regen,100,5,36,Lingering Damage Stamina,1,10,1,Fortify Destruction,4,60,16,0.1,8,"Graveyards, undead areas"
+Nirnroot,Damage Health,2,0,6,Damage Stamina,3,0,6,Invisibility,0,4,36,Resist Magic,1,60,7,0.2,10,Near water
+Nordic Barnacle,Damage Magicka,3,0,7,Waterbreathing,0,5,13,Regenerate Health,5,300,24,Fortify Pickpocket,4,60,16,0.2,5,Underwater
+Orange Dartwing,Restore Stamina,5,0,3,Ravage Magicka,2,10,2,Fortify Pickpocket,4,60,16,Lingering Damage Health,1,10,12,0.1,1,Hovering above water
+Pearl,Restore Stamina,5,0,3,Fortify Block,4,60,16,Restore Magicka,5,0,3,Resist Shock,3,60,12,0.1,2,Satchels; Alchemy Laboratory of a Homestead  Pearl Oysterà
+Pine Thrush Egg,Restore Stamina,5,0,3,Fortify Lockpicking,2,30,3,Weakness to Poison,2,30,7,Resist Shock,3,60,12,0.5,2,Nests in forests
+Poison Bloom,Damage Health,3,1,0,Slow,50,5,34,Fortify Carry Weight,4,300,29,Fear,1,30,16,0.3,5,Darkfall Cave
+Powdered Mammoth Tusk,Restore Stamina,5,0,3,Fortify Sneak,4,60,16,Weakness to Fire,3,30,6,Fear,1,30,16,0.1,2,"Giant Camps, Alchemy Laboratory of a Homestead "
+Purple Mountain Flower,Restore Stamina,5,0,3,Fortify Sneak,4,60,16,Lingering Damage Magicka,1,10,10,Resist Frost,3,60,12,0.1,2,Mountain flower clumps
+Red Mountain Flower,Restore Magicka,5,0,3,Ravage Magicka,2,10,2,Fortify Magicka,4,60,9,Damage Health,2,1,0,0.1,2,Mountain flower clumps
+River Betty,Damage Health,5,0,17,Fortify Alteration,4,60,6,Slow,50,5,34,Fortify Carry Weight,4,300,29,0.3,15,"Lakes, rivers, streams and fish barrels"
+Rock Warbler Egg,Restore Health,5,0,2,Fortify One-Handed,4,60,16,Damage Stamina,3,0,6,Weakness to Magic,2,30,7,0.5,2,Rock Warbler Nest
+Sabre Cat Tooth,Restore Stamina,5,0,3,Fortify Heavy Armor,2,60,7,Fortify Smithing,4,30,11,Weakness to Poison,2,30,7,0.1,2,"Sabre Cat, Snowy Sabre Cat"
+Salmon Roe,Restore Stamina,2,0,1,Waterbreathing,0,60,215,Fortify Magicka,50,5,10,Regenerate Magicka,5,300,24,0.2,5,"Salmon jumping up falls, Kitchen of a Homestead "
+Salt Pile,Weakness to Magic,2,30,7,Fortify Restoration,4,60,16,Slow,50,5,34,Regenerate Magicka,5,300,24,0.2,2,"Merchants, containers, near cooking places"
+Scaly Pholiota,Weakness to Magic,2,30,7,Fortify Illusion,4,60,13,Regenerate Stamina,5,300,24,Fortify Carry Weight,4,300,29,0.3,4,Dead birch trees
+Scathecraw,Ravage Health,2,10,0,Ravage Stamina,2,10,3,Ravage Magicka,2,10,2,Lingering Damage Health,1,10,12,0.1,1,Harvested all over Solstheim
+Silverside Perch,Restore Stamina,5,0,3,Damage Stamina Regen,100,5,22,Ravage Health,2,10,0,Resist Frost,3,60,12,0.3,15,"Lakes, rivers, streams and fish barrels"
+Skeever Tail,Damage Stamina Regen,100,5,22,Ravage Health,2,10,0,Damage Health,2,1,0,Fortify Light Armor,2,60,7,0.2,3,Skeever
+Slaughterfish Egg,Resist Poison,4,60,16,Fortify Pickpocket,4,60,16,Lingering Damage Health,1,10,12,Fortify Stamina,4,60,9,0.2,3,Underwater
+Slaughterfish Scales,Resist Frost,3,60,12,Lingering Damage Health,1,10,12,Fortify Heavy Armor,2,60,7,Fortify Block,4,60,16,0.1,3,Slaughterfish
+Small Antlers,Weakness to Poison,2,30,7,Fortify Restoration,4,60,16,Lingering Damage Stamina,1,10,1,Damage Health,2,1,0,0.1,2,Elk
+Small Pearl,Restore Stamina,5,0,3,Fortify One-Handed,4,60,16,Fortify Restoration,4,60,16,Resist Frost,3,60,12,0.1,2,Pearl Oysterà
+Snowberries,Resist Fire,3,60,12,Fortify Enchanting,1,30,2,Resist Frost,3,60,12,Resist Shock,3,60,12,0.1,4,"Snowberry bush, snowy areas"
+Spawn Ash,Ravage Stamina,2,10,3,Resist Fire,3,60,12,Fortify Enchanting,1,30,2,Ravage Magicka,2,10,2,0.1,20,Ash Spawn
+Spider Egg,Damage Stamina,3,0,6,Damage Magicka Regen,100,5,36,Fortify Lockpicking,2,30,3,Fortify Marksman,4,60,16,0.2,5,Spider lairs
+Spriggan Sap,Damage Magicka Regen,100,5,36,Fortify Enchanting,1,30,2,Fortify Smithing,4,30,11,Fortify Alteration,4,60,6,0.2,15,Spriggan
+Swamp Fungal Pod,Resist Shock,3,60,12,Lingering Damage Magicka,1,10,10,Paralysis,0,1,39,Restore Health,5,0,2,0.3,5,Swamps
+Taproot,Weakness to Magic,2,30,7,Fortify Illusion,4,60,13,Regenerate Magicka,5,300,24,Restore Magicka,5,0,3,0.5,15,Spriggan
+Thistle Branch,Resist Frost,3,60,12,Ravage Stamina,2,10,3,Resist Poison,3,0,1,Fortify Heavy Armor,2,60,7,0.1,1,Thistle Plant
+Torchbug Thorax,Restore Stamina,5,0,3,Lingering Damage Magicka,1,10,10,Weakness to Magic,2,30,7,Fortify Stamina,4,60,9,0.1,1,"Torchbugs, glowing at night"
+Trama Root,Weakness to Shock,3,30,7,Fortify Carry Weight,4,300,29,Damage Magicka,3,0,7,Slow,50,5,34,0.2,1,Harvested from ashen areas of Solstheim
+Troll Fat,Resist Poison,4,60,16,Fortify Two-Handed,4,60,16,Frenzy,1,10,15,Damage Health,2,1,0,1,15,Trolls
+Tundra Cotton,Resist Magic,1,60,7,Fortify Magicka,4,60,9,Fortify Block,4,60,16,Fortify Barter,1,30,6,0.1,1,"High mountains below snow line, tundra"
+Vampire Dust,Invisibility,0,4,36,Restore Magicka,5,0,3,Regenerate Health,5,300,24,Cure Disease,5,0,2,0.2,25,"Vampires, the Silver Hand"
+Void Salts,Weakness to Shock,3,30,7,Resist Magic,1,60,7,Damage Health,2,1,0,Fortify Magicka,4,60,9,0.2,125,Storm Atronach
+Wheat,Restore Health,5,0,2,Fortify Health,4,60,11,Damage Stamina Regen,100,5,22,Lingering Damage Magicka,1,10,10,0.1,5,"Grows on farms, containers"
+White Cap,Weakness to Frost,3,30,5,Fortify Heavy Armor,2,60,7,Restore Magicka,5,0,3,Ravage Magicka,2,10,2,0.3,0,Mushroom clusters near caves or dungeons
+Wisp Wrappings,Restore Stamina,5,0,3,Fortify Destruction,5,60,21,Fortify Carry Weight,4,300,29,Resist Magic,1,60,7,0.1,2,Wispmother
+Yellow Mountain Flower,Resist Poison,4,60,16,Fortify Restoration,5,60,21,Fortify Health,4,60,11,Damage Stamina Regen,100,5,22,0.1,2,"Darkfall Cave, Ancestor Glade"

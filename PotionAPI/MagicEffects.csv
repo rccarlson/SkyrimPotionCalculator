@@ -1,0 +1,56 @@
+Effect (ID),Description,Base_Cost,Base_Mag,Base_Dur,Beneficial,Poisonous,Power Affects Magnitude,Power Affects Duration
+Cure Disease,Cures all diseases.,0.5,5,0,Y,N,Y,Y
+Damage Health,Causes <mag> points of poison damage.,3,2,1,N,Y,Y,N
+Damage Magicka,Drains the target's Magicka by <mag> points.,2.2,3,0,N,Y,Y,N
+Damage Magicka Regen,Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.,0.5,100,5,N,Y,N,Y
+Damage Stamina,Drain the target's Stamina by <mag> points.,1.8,3,0,N,Y,Y,N
+Damage Stamina Regen,Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.,0.3,100,5,N,Y,N,Y
+Fear,Creatures and people up to level <mag> flee from combat for <dur> seconds.,5,1,30,N,Y,Y,N
+Fortify Alteration,Alteration spells last <mag>% longer for <dur> seconds.,0.2,4,60,Y,N,Y,N
+Fortify Barter,You haggle for <mag>% better prices for <dur> seconds.,2,1,30,Y,N,Y,N
+Fortify Block,Blocking absorbs <mag>% more damage for <dur> seconds.,0.5,4,60,Y,N,Y,N
+Fortify Carry Weight,Carrying capacity increases by <mag> for <dur> seconds.,0.15,4,300,Y,N,Y,N
+Fortify Conjuration,Conjuration spells last <mag>% longer for <dur> seconds.,0.25,5,60,Y,N,Y,N
+Fortify Destruction,Destruction spells are <mag>% stronger for <dur> seconds.,0.5,5,60,Y,N,Y,N
+Fortify Enchanting,"For <dur> seconds, items are enchanted <mag>% stronger.",0.6,1,30,Y,N,Y,N
+Fortify Health,Health is increased by <mag> points for <dur> seconds.,0.35,4,60,Y,N,Y,N
+Fortify Heavy Armor,Increase Heavy Armor skill by <mag> points for <dur> seconds.,0.5,2,60,Y,N,Y,N
+Fortify Illusion,Illusion spells are <mag>% stronger for <dur> seconds.,0.4,4,60,Y,N,Y,N
+Fortify Light Armor,Increases Light Armor skill by <mag> points for <dur> seconds.,0.5,2,60,Y,N,Y,N
+Fortify Lockpicking,Lockpicking is <mag>% easier for <dur> seconds.,0.5,2,30,Y,N,Y,N
+Fortify Magicka,Magicka is increased by <mag> points for <dur> seconds.,0.3,4,5,Y,N,Y,N
+Fortify Marksman,Bows do <mag>% more damage for <dur> seconds.,0.5,4,60,Y,N,Y,N
+Fortify One-Handed,One-handed weapons do <mag>% more damage for <dur> seconds.,0.5,4,60,Y,N,Y,N
+Fortify Pickpocket,Pickpocketing is <mag>% easier for <dur> seconds.,0.5,4,60,Y,N,Y,N
+Fortify Restoration,Restoration spells are <mag>% stronger for <dur> seconds.,0.5,4,60,Y,N,Y,N
+Fortify Smithing,"For <dur> seconds, weapon and armor improving is <mag>% better.",0.75,4,30,Y,N,Y,N
+Fortify Sneak,You are <mag>% harder to detect for <dur> seconds.,0.5,4,60,Y,N,Y,N
+Fortify Stamina,Stamina is increased by <mag> points for <dur> seconds.,0.3,4,60,Y,N,Y,N
+Fortify Two-Handed,Two-handed weapons do <mag>% more damage for <dur> seconds.,0.5,4,60,Y,N,Y,N
+Frenzy,Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.,15,1,10,N,Y,Y,N
+Invisibility,Invisibility for <dur> seconds.,100,0,4,Y,N,N,Y
+Lingering Damage Health,Causes <mag> points of poison damage for <dur> seconds.,12,1,10,N,Y,Y,N
+Lingering Damage Magicka,Drains the target's Magicka by <mag> points per second for <dur> seconds.,10,1,10,N,Y,Y,N
+Lingering Damage Stamina,Drain the target's Stamina by <mag> points per second for <dur> seconds.,1.8,1,10,N,Y,Y,N
+Paralysis,Target is paralyzed for <dur> seconds.,500,0,1,N,Y,N,Y
+Ravage Health,Causes <mag> points of concentrated poison damage.,0.4,2,10,N,Y,Y,N
+Ravage Magicka,Concentrated poison damages maximum magicka by <mag> points.,1,2,10,N,Y,Y,N
+Ravage Stamina,Concentrated poison damages maximum stamina by <mag> points.,1.6,2,10,N,Y,Y,N
+Regenerate Health,Health regenerates <mag>% faster for <dur> seconds.,0.1,5,300,Y,N,Y,N
+Regenerate Magicka,Magicka regenerates <mag>% faster for <dur> seconds.,0.1,5,300,Y,N,Y,N
+Regenerate Stamina,Stamina regenerates <mag>% faster for <dur> seconds.,0.1,5,300,Y,N,Y,N
+Resist Fire,Resist <mag>% of fire damage for <dur> seconds.,0.5,3,60,Y,N,Y,N
+Resist Frost,Resist <mag>% of frost damage for <dur> seconds.,0.5,3,60,Y,N,Y,N
+Resist Magic,Resist <mag>% of magic for <dur> seconds.,1,1,60,Y,N,Y,N
+Resist Poison,Resist <mag>% of poison for <dur> seconds.,0.5,4,60,F,Y,Y,N
+Resist Shock,Resist <mag>% of shock damage for <dur> seconds.,0.5,3,60,Y,N,Y,N
+Restore Health,Restore <mag> points of Health.,0.5,5,0,Y,N,Y,N
+Restore Magicka,Restore <mag> points of Magicka.,0.6,5,0,Y,N,Y,N
+Restore Stamina,Restore <mag> Stamina.,0.6,5,0,Y,N,Y,N
+Slow,Target moves at 50% speed for <dur> seconds.,1,50,5,N,Y,N,Y
+Waterbreathing,Can breathe underwater for <dur> seconds.,30,0,5,Y,N,N,Y
+Weakness to Fire,Target is <mag>% weaker to fire damage for <dur> seconds.,0.6,3,30,N,Y,Y,N
+Weakness to Frost,Target is <mag>% weaker to frost damage for <dur> seconds.,0.5,3,30,N,Y,Y,N
+Weakness to Magic,Target is <mag>% weaker to magic for <dur> seconds.,1,2,30,N,Y,Y,N
+Weakness to Poison,Target is <mag>% weaker to poison for <dur> seconds.,1,2,30,N,Y,Y,N
+Weakness to Shock,Target is <mag>% weaker to shock damage for <dur> seconds.,0.7,3,30,N,Y,Y,N
