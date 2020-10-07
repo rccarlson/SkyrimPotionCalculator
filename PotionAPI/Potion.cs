@@ -46,22 +46,28 @@ namespace PotionAPI
 			return potionEffects;
 		}
 
+		/// <summary>
+		/// Get the index of the highest value ingredient. Does not factor in any perks
+		/// </summary>
+		/// <param name="ingredientEffects">List of applicable effects provided by ingredients</param>
+		/// <returns>Index of highest value effect</returns>
 		internal int GetMaxValueIndex(List<AlchemyEffect> ingredientEffects)
-        {
+		{
 			int index = 0, max = 0;
 			for(int i = 0; i < ingredientEffects.Count; i++)
-            {
+			{
 				if(ingredientEffects[i].value>max)
-                {
+				{
 					index = i;
 					max = ingredientEffects[i].value;
-                }
-            }
+				}
+			}
 			return index;
-        }
+		}
 
-		public bool IsPotion => ingredientEffects[highestValueEffectIndex].beneficial;
-		public bool IsPoison => ingredientEffects[highestValueEffectIndex].poisonous;
+		public bool IsPotion => !ingredientEffects[highestValueEffectIndex].magicEffect.hostile;
+		public bool IsPoison => ingredientEffects[highestValueEffectIndex].magicEffect.hostile;
+
 
 		public class PotionEffect
 		{

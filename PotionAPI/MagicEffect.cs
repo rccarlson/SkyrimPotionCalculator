@@ -16,25 +16,42 @@ namespace PotionAPI
 		internal static List<MagicEffect> _allMagicEffects = LoadFromFile(Properties.Resources.MagicEffectFile);
 
 		public readonly string Name, Description;
-		public readonly float baseCost, baseMag, baseDur;
-		public readonly bool beneficial, poisonous, powerAffectsMag, powerAffectsDur;
+		public readonly float baseCost;
+		public readonly bool hostile, detrimental, noMagnitude, noDuration, beneficial, poisonous, powerAffectsMag, powerAffectsDur;
+		public readonly List<string> keywords;
 
-		private MagicEffect(string name, string description, string baseCost, string baseMagnitude, string baseDuration, string beneficial, string poisonous, string powerAffectsMagnitude, string powerAffectsDuration)
+		private MagicEffect(string name, string description, string baseCost, string hostile, string detrimental, string noMagnitude, string noDuration, string powerAffects, string keywords)
 		{
 			//strings
 			this.Name = name;
 			this.Description = description;
-			
+
 			//floats
 			this.baseCost = Convert.ToSingle(baseCost);
-			this.baseMag = Convert.ToSingle(baseMagnitude);
-			this.baseDur = Convert.ToSingle(baseDuration);
 
 			//bools
-			this.beneficial = beneficial.StartsWith("Y");
-			this.poisonous = poisonous.StartsWith("Y");
-			this.powerAffectsMag = powerAffectsMagnitude.StartsWith("Y");
-			this.powerAffectsDur = powerAffectsDuration.StartsWith("Y");
+			this.hostile = hostile.StartsWith("Y");
+			this.detrimental = detrimental.StartsWith("Y");
+			this.noMagnitude = noMagnitude.StartsWith("Y");
+			this.noDuration = noDuration.StartsWith("Y");
+
+			if (powerAffects == "Magnitude")
+			{
+				this.powerAffectsMag = true;
+				this.powerAffectsDur = false;
+			}
+			else if (powerAffects == "Duration")
+			{
+				this.powerAffectsMag = false;
+				this.powerAffectsDur = true;
+			}
+			else
+				throw new FormatException($"Bad \"Power Affects\" input: \"{powerAffects}\"");
+
+			this.keywords = keywords.Split(';').ToList();
+
+			beneficial = this.keywords.Contains("MagicAlchBeneficial");
+			
 		}
 
 		private static List<MagicEffect> LoadFromFile(string filepath)
@@ -45,17 +62,16 @@ namespace PotionAPI
 				
 				for(int i = 0; i < csv.Rows; i++)
 				{
-					//Create an object from each row of the CSV
 					magicEffects.Add(new MagicEffect(
-						name:					csv.GetEntry("Effect (ID)", i),
+						name:                   csv.GetEntry("Effect (ID)", i),
 						description:			csv.GetEntry("Description", i),
 						baseCost:				csv.GetEntry("Base_Cost", i),
-						baseMagnitude:			csv.GetEntry("Base_Mag", i),
-						baseDuration:			csv.GetEntry("Base_Dur", i),
-						beneficial:				csv.GetEntry("Beneficial", i),
-						poisonous:				csv.GetEntry("Poisonous", i),
-						powerAffectsMagnitude:	csv.GetEntry("Power Affects Magnitude", i),
-						powerAffectsDuration:	csv.GetEntry("Power Affects Duration", i)
+						hostile:				csv.GetEntry("Hostile", i),
+						detrimental:			csv.GetEntry("Detrimental", i),
+						noMagnitude:			csv.GetEntry("No Magnitude", i),
+						noDuration:				csv.GetEntry("No Duration", i),
+						powerAffects:			csv.GetEntry("Power Affects", i),
+						keywords:				csv.GetEntry("Keywords", i)
 						));
 				}
 

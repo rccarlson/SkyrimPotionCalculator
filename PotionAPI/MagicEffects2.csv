@@ -1,0 +1,58 @@
+Effect (ID),Description,Base_Cost,Hostile,Detrimental,No Magnitude,No Duration,Power Affects,Keywords,Power Affects Magnitude,Power Affects Duration,Beneficial,Poisonous,Base_Mag,Base_Dur
+Cure Disease,Cures all diseases.,0.5,N,N,N,Y,Magnitude,MagicAlchBeneficial,Y,Y,Y,N,5,0
+Damage Health,Causes <mag> points of poison damage.,3,Y,Y,N,N,Magnitude,MagicAlchHarmful,Y,N,N,Y,2,1
+Damage Magicka,Drains the target's Magicka by <mag> points.,2.2,Y,Y,N,N,Magnitude,MagicAlchHarmful,Y,N,N,Y,3,0
+Damage Magicka Regen,Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.,0.5,Y,Y,N,N,Duration,MagicAlchHarmful,N,Y,N,Y,100,5
+Damage Stamina,Drain the target's Stamina by <mag> points.,1.8,Y,Y,N,N,Magnitude,MagicAlchHarmful,Y,N,N,Y,3,0
+Damage Stamina Regen,Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.,0.3,Y,Y,N,N,Duration,MagicAlchHarmful,N,Y,N,Y,100,5
+Fear,Creatures and people up to level <mag> flee from combat for <dur> seconds.,5,Y,Y,N,N,Magnitude,MagicInfluence,Y,N,N,Y,1,30
+Fortify Alchemy,Potions you mix are <mag>% stronger for <dur> seconds.,0.75,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyAlchemy,,,,,,
+Fortify Alteration,Alteration spells last <mag>% longer for <dur> seconds.,0.2,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyAlteration,Y,N,Y,N,4,60
+Fortify Barter,You haggle for <mag>% better prices for <dur> seconds.,2,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifySpeechcraft,Y,N,Y,N,1,30
+Fortify Block,Blocking absorbs <mag>% more damage for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagichAlchFortifyBlock,Y,N,Y,N,4,60
+Fortify Carry Weight,Carrying capacity increases by <mag> for <dur> seconds.,0.15,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyCarryWeight,Y,N,Y,N,4,300
+Fortify Conjuration,Conjuration spells last <mag>% longer for <dur> seconds.,0.25,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyConjuration,Y,N,Y,N,5,60
+Fortify Destruction,Destruction spells are <mag>% stronger for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyDestruction,Y,N,Y,N,5,60
+Fortify Enchanting,"For <dur> seconds, items are enchanted <mag>% stronger.",0.6,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyEnchanting,Y,N,Y,N,1,30
+Fortify Health,Health is increased by <mag> points for <dur> seconds.,0.35,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyHealth,Y,N,Y,N,4,60
+Fortify Heavy Armor,Increase Heavy Armor skill by <mag> points for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyHeavyArmor,Y,N,Y,N,2,60
+Fortify Illusion,Illusion spells are <mag>% stronger for <dur> seconds.,0.4,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyIllusion,Y,N,Y,N,4,60
+Fortify Light Armor,Increases Light Armor skill by <mag> points for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyLightArmor,Y,N,Y,N,2,60
+Fortify Lockpicking,Lockpicking is <mag>% easier for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyLockpicking,Y,N,Y,N,2,30
+Fortify Magicka,Magicka is increased by <mag> points for <dur> seconds.,0.3,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyMagicka,Y,N,Y,N,4,5
+Fortify Marksman,Bows do <mag>% more damage for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyMarksman,Y,N,Y,N,4,60
+Fortify One-Handed,One-handed weapons do <mag>% more damage for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyOneHanded,Y,N,Y,N,4,60
+Fortify Persuasion,+<mag> Speechcraft for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifySpeechcraft,,,,,,
+Fortify Pickpocket,Pickpocketing is <mag>% easier for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyPickPocket,Y,N,Y,N,4,60
+Fortify Restoration,Restoration spells are <mag>% stronger for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyRestoration,Y,N,Y,N,4,60
+Fortify Smithing,"For <dur> seconds, weapon and armor improving is <mag>% better.",0.75,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifySmithing,Y,N,Y,N,4,30
+Fortify Sneak,You are <mag>% harder to detect for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifySneak,Y,N,Y,N,4,60
+Fortify Stamina,Stamina is increased by <mag> points for <dur> seconds.,0.3,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyStamina,Y,N,Y,N,4,60
+Fortify Two-Handed,Two-handed weapons do <mag>% more damage for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyTwoHanded,Y,N,Y,N,4,60
+Frenzy,Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.,15,Y,Y,N,N,Magnitude,MagicInfluence,Y,N,N,Y,1,10
+Invisibility,Invisibility for <dur> seconds.,100,N,N,Y,N,Duration,MagicAlchBeneficial;MagicAlchDurationBased;MagicInvisibility,N,Y,Y,N,0,4
+Lingering Damage Health,Causes <mag> points of poison damage for <dur> seconds.,12,Y,Y,N,N,Magnitude,MagicAlchHarmful,Y,N,N,Y,1,10
+Lingering Damage Magicka,Drains the target's Magicka by <mag> points per second for <dur> seconds.,10,Y,Y,N,N,Magnitude,MagicAlchHarmful,Y,N,N,Y,1,10
+Lingering Damage Stamina,Drain the target's Stamina by <mag> points per second for <dur> seconds.,1.8,Y,Y,N,N,Magnitude,MagicAlchHarmful,Y,N,N,Y,1,10
+Paralysis,Target is paralyzed for <dur> seconds.,500,Y,N,Y,N,Duration,MagicAlchHarmful;MagicParalysis,N,Y,N,Y,0,1
+Ravage Health,Causes <mag> points of concentrated poison damage.,0.4,Y,Y,N,N,Magnitude,MagicAlchHarmful,Y,N,N,Y,2,10
+Ravage Magicka,Concentrated poison damages maximum magicka by <mag> points.,1,Y,Y,N,N,Magnitude,MagicAlchHarmful,Y,N,N,Y,2,10
+Ravage Stamina,Concentrated poison damages maximum stamina by <mag> points.,1.6,Y,Y,N,N,Magnitude,MagicAlchHarmful,Y,N,N,Y,2,10
+Regenerate Health,Health regenerates <mag>% faster for <dur> seconds.,0.1,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyHealRate,Y,N,Y,N,5,300
+Regenerate Magicka,Magicka regenerates <mag>% faster for <dur> seconds.,0.1,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyMagickaRate,Y,N,Y,N,5,300
+Regenerate Stamina,Stamina regenerates <mag>% faster for <dur> seconds.,0.1,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchFortifyStaminaRate,Y,N,Y,N,5,300
+Resist Fire,Resist <mag>% of fire damage for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchResistFire,Y,N,Y,N,3,60
+Resist Frost,Resist <mag>% of frost damage for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchResistFrost,Y,N,Y,N,3,60
+Resist Magic,Resist <mag>% of magic for <dur> seconds.,1,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchResistMagic,Y,N,Y,N,1,60
+Resist Poison,Resist <mag>% of poison for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchResistPoison,Y,N,F,Y,4,60
+Resist Shock,Resist <mag>% of shock damage for <dur> seconds.,0.5,N,N,N,N,Magnitude,MagicAlchBeneficial;MagicAlchResistShock,Y,N,Y,N,3,60
+Restore Health,Restore <mag> points of Health.,0.5,N,N,N,Y,Magnitude,MagicAlchBeneficial;MagicAlchRestoreHealth,Y,N,Y,N,5,0
+Restore Magicka,Restore <mag> points of Magicka.,0.6,N,N,N,Y,Magnitude,MagicAlchBeneficial;MagicAlchRestoreMagicka,Y,N,Y,N,5,0
+Restore Stamina,Restore <mag> Stamina.,0.6,N,N,N,Y,Magnitude,MagicAlchBeneficial;MagicAlchRestoreStamina,Y,N,Y,N,5,0
+Slow,Target moves at 50% speed for <dur> seconds.,1,Y,Y,N,N,Duration,MagicAlchHarmful;MagicSlow,N,Y,N,Y,50,5
+Waterbreathing,Can breathe underwater for <dur> seconds.,30,N,N,Y,N,Duration,MagicAlchBeneficial;MagicAlchDurationBased,N,Y,Y,N,0,5
+Weakness to Fire,Target is <mag>% weaker to fire damage for <dur> seconds.,0.6,Y,Y,N,N,Magnitude,MagicAlchHarmful;MagicAlchWeaknessFire,Y,N,N,Y,3,30
+Weakness to Frost,Target is <mag>% weaker to frost damage for <dur> seconds.,0.5,Y,Y,N,N,Magnitude,MagicAlchHarmful;MagicAlchWeaknessFrost,Y,N,N,Y,3,30
+Weakness to Magic,Target is <mag>% weaker to magic for <dur> seconds.,1,Y,Y,N,N,Magnitude,MagicAlchHarmful;MagicAlchWeaknessMagic,Y,N,N,Y,2,30
+Weakness to Poison,Target is <mag>% weaker to poison for <dur> seconds.,1,Y,Y,N,N,Magnitude,MagicAlchHarmful,Y,N,N,Y,2,30
+Weakness to Shock,Target is <mag>% weaker to shock damage for <dur> seconds.,0.7,Y,Y,N,N,Magnitude,MagicAlchHarmful;MagicAlchWeaknessShock,Y,N,N,Y,3,30

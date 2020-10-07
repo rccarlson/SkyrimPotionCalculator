@@ -70,7 +70,7 @@ namespace PotionAPI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MagicEffects.csv.
+        ///   Looks up a localized string similar to MagicEffects2.csv.
         /// </summary>
         internal static string MagicEffectFile {
             get {

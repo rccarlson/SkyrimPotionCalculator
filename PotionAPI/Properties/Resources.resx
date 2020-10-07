@@ -121,6 +121,6 @@
     <value>ingredients.csv</value>
   </data>
   <data name="MagicEffectFile" xml:space="preserve">
-    <value>MagicEffects.csv</value>
+    <value>MagicEffects2.csv</value>
   </data>
 </root>

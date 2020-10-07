@@ -7,6 +7,8 @@ namespace InputTests
 	[TestClass]
 	public class CSVTests
 	{
+		const int	ExpectedMagicEffects	= 57,
+					ExpectedIngredients		= 110;
 		static readonly string[] requiredOutputFiles = new string[] {
 			PotionAPI.Properties.Resources.MagicEffectFile,
 			PotionAPI.Properties.Resources.IngredientFile
@@ -55,7 +57,7 @@ namespace InputTests
 		public void MagicEffectLoadTest()
 		{
 			Assert.IsNotNull(MagicEffect._allMagicEffects);
-			Assert.IsTrue(MagicEffect._allMagicEffects.Count == 55);
+			Assert.AreEqual(ExpectedMagicEffects, MagicEffect._allMagicEffects.Count, $"Expected to find {ExpectedMagicEffects} Magic Effects, but found {MagicEffect._allMagicEffects.Count}");
 		}
 
 		[TestMethod]
@@ -63,7 +65,7 @@ namespace InputTests
 		public void IngredientLoadTest()
 		{
 			Assert.IsNotNull(Ingredient._allIngredients);
-			Assert.IsTrue(Ingredient._allIngredients.Count == 110);
+			Assert.IsTrue(Ingredient._allIngredients.Count == ExpectedIngredients);
 			foreach (Ingredient ingredient in Ingredient._allIngredients)
 				Assert.AreEqual(ingredient.Effects.Length, 4);
 		}
@@ -105,8 +107,21 @@ namespace InputTests
 			foreach (MagicEffect eff in MagicEffect._allMagicEffects)
 				if (eff.beneficial)
 					Assert.IsFalse(eff.poisonous, $"Magic effect {eff.Name} is both beneficial and poisonous");
-				else
-					Assert.IsTrue(eff.poisonous, $"Magic effect {eff.Name} is neither beneficial nor poisonous");
+		}
+
+		[TestMethod]
+		public void AllIngredientEffectsValid()
+		{
+			foreach(Ingredient ingredient in Ingredient._allIngredients)
+			{
+				Assert.AreEqual(4, ingredient.Effects.Length, $"Ingredient \"{ingredient.Name}\" does not have expected number of effects");
+				foreach(AlchemyEffect effect in ingredient.Effects)
+				{
+					var mgef = MagicEffect.GetMagicEffect(effect.name);
+					Assert.IsNotNull(mgef,$"Failed to fetch Magic Effect \"{effect.name}\"");
+					Assert.AreEqual(effect.name, mgef.Name, "Incorrect effect was pulled");
+				}
+			}
 		}
 	}
 }
