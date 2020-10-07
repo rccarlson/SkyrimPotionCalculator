@@ -11,7 +11,7 @@ namespace PotionAPI
 	/// The alchemical effect produced by an ingredient
 	/// </summary>
 	[DebuggerDisplay("{name,nq}")]
-	public struct AlchemyEffect
+	public struct IngredientEffect
 	{
 		public readonly string name, description;
 		public readonly int magnitude, duration, value;
@@ -24,7 +24,7 @@ namespace PotionAPI
 		/// <param name="mag">Base magnitude</param>
 		/// <param name="dur">Base duration</param>
 		/// <param name="val">Base value</param>
-		internal AlchemyEffect(string name, string mag, string dur, string val)
+		internal IngredientEffect(string name, string mag, string dur, string val)
 		{
 			magicEffect = MagicEffect.GetMagicEffect(name);
 

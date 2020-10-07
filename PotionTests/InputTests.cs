@@ -115,7 +115,7 @@ namespace InputTests
 			foreach(Ingredient ingredient in Ingredient._allIngredients)
 			{
 				Assert.AreEqual(4, ingredient.Effects.Length, $"Ingredient \"{ingredient.Name}\" does not have expected number of effects");
-				foreach(AlchemyEffect effect in ingredient.Effects)
+				foreach(IngredientEffect effect in ingredient.Effects)
 				{
 					var mgef = MagicEffect.GetMagicEffect(effect.name);
 					Assert.IsNotNull(mgef,$"Failed to fetch Magic Effect \"{effect.name}\"");

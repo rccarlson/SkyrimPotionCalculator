@@ -9,72 +9,55 @@ namespace PotionAPI
 	public class Potion
 	{
 		public readonly Ingredient[] ingredients;
-		public readonly List<AlchemyEffect> ingredientEffects;
+		public readonly List<IngredientEffect> ingredientEffects;
 		public readonly List<PotionEffect> effects;
 		public readonly PerkConfiguration perks;
 		internal readonly int highestValueEffectIndex;
+		internal readonly IngredientEffect highestValueEffect;
 
 		public Potion(Ingredient[] ingredients, PerkConfiguration perks)
 		{
 			this.ingredients = ingredients;
 			this.perks = perks;
 			ingredientEffects = ProcessIngredients(ingredients);
-			highestValueEffectIndex = GetMaxValueIndex(ingredientEffects);
+			highestValueEffect = ingredientEffects.OrderByDescending(effect => effect.value).FirstOrDefault();
 		}
 
 		/// <summary>
 		/// Find the applicable ingredient effects for use in potion
 		/// </summary>
 		/// <param name="ingredients">Input ingredients</param>
-		/// <returns><see cref="AlchemyEffect"/> objects to be converted for use in potion</returns>
-		internal List<AlchemyEffect> ProcessIngredients(Ingredient[] ingredients)
+		/// <returns><see cref="IngredientEffect"/> objects to be converted for use in potion</returns>
+		internal List<IngredientEffect> ProcessIngredients(Ingredient[] ingredients)
 		{
-			// Create list of all alchemical effects from ingredients
-			List<AlchemyEffect> alchEffects = new List<AlchemyEffect>();
+			var allIngredientEffects = new Dictionary<string, List<IngredientEffect>>();
 			foreach (Ingredient ingredient in ingredients)
-				alchEffects.AddRange(ingredient.Effects);
-
-			// Create list of effects that occur at least twice, ordered by priority
-			var applicableEffects = from effect in alchEffects where alchEffects.Count(e => e.name == effect.name) > 1 orderby effect.Priority descending select effect;
-
-			// Take the first of each effect type from the list
-			List<AlchemyEffect> potionEffects = new List<AlchemyEffect>();
-			foreach (AlchemyEffect effect in applicableEffects)
-				if (!potionEffects.Any(e => e.name == effect.name))
-					potionEffects.Add(effect);
-
-			return potionEffects;
-		}
-
-		/// <summary>
-		/// Get the index of the highest value ingredient. Does not factor in any perks
-		/// </summary>
-		/// <param name="ingredientEffects">List of applicable effects provided by ingredients</param>
-		/// <returns>Index of highest value effect</returns>
-		internal int GetMaxValueIndex(List<AlchemyEffect> ingredientEffects)
-		{
-			int index = 0, max = 0;
-			for(int i = 0; i < ingredientEffects.Count; i++)
-			{
-				if(ingredientEffects[i].value>max)
+				foreach (IngredientEffect effect in ingredient.Effects)
 				{
-					index = i;
-					max = ingredientEffects[i].value;
+					if (allIngredientEffects.ContainsKey(effect.name))
+						allIngredientEffects[effect.name].Add(effect);
+					else
+						allIngredientEffects.Add(
+							key: effect.name,
+							value: new List<IngredientEffect>() { effect });
 				}
-			}
-			return index;
+			var validIngredientEffectLists = allIngredientEffects.Values.Where(effectList => effectList.Count > 1);
+			var maxValueEffects = validIngredientEffectLists.Select(list => list.OrderByDescending(effect => effect.value).First());
+
+			return maxValueEffects.ToList();
 		}
 
-		public bool IsPotion => !ingredientEffects[highestValueEffectIndex].magicEffect.hostile;
-		public bool IsPoison => ingredientEffects[highestValueEffectIndex].magicEffect.hostile;
+		public bool IsValid => effects.Count > 0;
+		public bool IsPotion => IsValid && !highestValueEffect.magicEffect.hostile;
+		public bool IsPoison => IsValid && highestValueEffect.magicEffect.hostile;
 
 
 		public class PotionEffect
 		{
 			private readonly MagicEffect _magicEffect;
-			private readonly AlchemyEffect _alchemyEffect;
+			private readonly IngredientEffect _alchemyEffect;
 
-			internal PotionEffect(AlchemyEffect ingredientEffect)
+			internal PotionEffect(IngredientEffect ingredientEffect)
 			{
 				_alchemyEffect = ingredientEffect;
 				_magicEffect = MagicEffect.GetMagicEffect(ingredientEffect.name);

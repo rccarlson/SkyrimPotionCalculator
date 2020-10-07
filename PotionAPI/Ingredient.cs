@@ -16,12 +16,12 @@ namespace PotionAPI
 		internal static readonly List<Ingredient> _allIngredients = LoadFromFile(Properties.Resources.IngredientFile);
 
 		public readonly string Name, Obtained;
-		public readonly AlchemyEffect[] Effects;
+		public readonly IngredientEffect[] Effects;
 		public readonly float Weight;
 		public readonly int Value;
 
 		private Ingredient(string name,
-			AlchemyEffect[] effects,
+			IngredientEffect[] effects,
 			string weight, string value, string obtained)
 		{
 			//strings
@@ -57,10 +57,10 @@ namespace PotionAPI
 				for (int row = 0; row < csv.Rows; row++)
 				{
 					//Create an object from each row of the CSV
-					AlchemyEffect[] effects = new AlchemyEffect[maxEffect];
+					IngredientEffect[] effects = new IngredientEffect[maxEffect];
 					for(int effectNum = 1; effectNum <= maxEffect; effectNum++)
 					{
-						effects[effectNum - 1] = new AlchemyEffect(
+						effects[effectNum - 1] = new IngredientEffect(
 							name:	csv.GetEntry("Effect " + effectNum.ToString() + ": Name", row),
 							mag:	csv.GetEntry("Effect " + effectNum.ToString() + ": Magnitude", row),
 							dur:	csv.GetEntry("Effect " + effectNum.ToString() + ": Duration", row),

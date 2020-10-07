@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlchemyEffect.cs" />
+    <Compile Include="IngredientEffect.cs" />
     <Compile Include="CSV.cs" />
     <Compile Include="MagicEffect.cs" />
     <Compile Include="Ingredient.cs" />
