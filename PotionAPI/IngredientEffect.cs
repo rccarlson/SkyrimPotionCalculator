@@ -16,6 +16,7 @@ namespace PotionAPI
 		public readonly string name, description;
 		public readonly int magnitude, duration, value;
 		public readonly MagicEffect magicEffect;
+		public readonly string ingredientName;
 
 		/// <summary>
 		/// Create an alchemical effect by defining its properties
@@ -24,7 +25,7 @@ namespace PotionAPI
 		/// <param name="mag">Base magnitude</param>
 		/// <param name="dur">Base duration</param>
 		/// <param name="val">Base value</param>
-		internal IngredientEffect(string name, string mag, string dur, string val)
+		internal IngredientEffect(string name, string mag, string dur, string val, string ingredientName)
 		{
 			magicEffect = MagicEffect.GetMagicEffect(name);
 
@@ -34,6 +35,8 @@ namespace PotionAPI
 			this.magnitude = Convert.ToInt32(mag);
 			this.duration = Convert.ToInt32(dur);
 			this.value = Convert.ToInt32(val);
+
+			this.ingredientName = ingredientName;
 		}
 
 		/// <summary>

@@ -61,10 +61,11 @@ namespace PotionAPI
 					for(int effectNum = 1; effectNum <= maxEffect; effectNum++)
 					{
 						effects[effectNum - 1] = new IngredientEffect(
-							name:	csv.GetEntry("Effect " + effectNum.ToString() + ": Name", row),
-							mag:	csv.GetEntry("Effect " + effectNum.ToString() + ": Magnitude", row),
-							dur:	csv.GetEntry("Effect " + effectNum.ToString() + ": Duration", row),
-							val:	csv.GetEntry("Effect " + effectNum.ToString() + ": Value", row)
+							name:			csv.GetEntry("Effect " + effectNum.ToString() + ": Name", row),
+							mag:			csv.GetEntry("Effect " + effectNum.ToString() + ": Magnitude", row),
+							dur:			csv.GetEntry("Effect " + effectNum.ToString() + ": Duration", row),
+							val:			csv.GetEntry("Effect " + effectNum.ToString() + ": Value", row),
+							ingredientName:	csv.GetEntry("Ingredient", row)
 							);
 					}
 
