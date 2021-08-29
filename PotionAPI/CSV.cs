@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic.FileIO;
 using System.IO;
+using System.Diagnostics;
 
 namespace PotionAPI
 {
+	[DebuggerDisplay("{_filepath,nq}")]
 	internal class CSV
 	{
 		private readonly string _filepath;
