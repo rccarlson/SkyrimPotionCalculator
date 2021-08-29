@@ -1,26 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PotionAPI
 {
+	/// <summary>
+	/// Class to handle all potion calculations and properites
+	/// </summary>
+	[DebuggerDisplay("{Name,nq}")]
 	public class Potion
 	{
+		const float ingredientMult = 4.0f,
+			skillFactor = 1.5f;
+
 		public readonly Ingredient[] ingredients;
 		public readonly List<IngredientEffect> ingredientEffects;
 		public readonly List<PotionEffect> effects;
 		public readonly PerkConfiguration perks;
-		internal readonly int highestValueEffectIndex;
 		internal readonly IngredientEffect highestValueEffect;
 
-		public Potion(Ingredient[] ingredients, PerkConfiguration perks)
+		public Potion(IEnumerable<Ingredient> ingredients, PerkConfiguration perks)
 		{
-			this.ingredients = ingredients;
+			this.ingredients = ingredients.Distinct().ToArray();
 			this.perks = perks;
-			ingredientEffects = ProcessIngredients(ingredients);
+			ingredientEffects = ProcessIngredients(this.ingredients);
 			highestValueEffect = ingredientEffects.OrderByDescending(effect => effect.value).FirstOrDefault();
+
+			foreach(IngredientEffect effect in ingredientEffects)
+            {
+				GetPotionEffect(effect, perks);
+            }
 		}
 
 		/// <summary>
@@ -47,32 +59,94 @@ namespace PotionAPI
 			return maxValueEffects.ToList();
 		}
 
-		public bool IsValid => effects.Count > 0;
+		public bool IsValid => ingredientEffects.Count > 0;
 		public bool IsPotion => IsValid && !highestValueEffect.magicEffect.hostile;
 		public bool IsPoison => IsValid && highestValueEffect.magicEffect.hostile;
 
+		public string Name
+        {
+            get
+            {
+				if (!IsValid) return "Invalid Potion";
+
+				StringBuilder builder = new StringBuilder();
+				if (IsPotion)	builder.Append("Potion of ");
+				else			builder.Append("Poison of ");
+				builder.Append(highestValueEffect.name);
+				return builder.ToString();
+            }
+        }
+		public string Description
+        {
+            get
+            {
+				throw new NotImplementedException(nameof(Description));
+            }
+        }
+
+		internal float GetPowerFactor(IngredientEffect ingredientEffect, PerkConfiguration perks)
+        {
+			float physicianPerkMultiplier = perks.PhysicianPerk
+					&& (ingredientEffect.name == "Restore Health"
+					|| ingredientEffect.name == "Restore Magicka"
+					|| ingredientEffect.name == "Restore Stamina") ? 1.25f : 1.0f;
+
+			float benefactorPerkMultiplier = perks.BenefactorPerk
+				&& IsPotion
+				&& ingredientEffect.magicEffect.beneficial ? 1.25f : 1.0f;
+
+			float poisonerPerkMultiplier = perks.PoisonerPerk
+				&& IsPoison
+				&& ingredientEffect.magicEffect.HasKeyword("MagicAlchHarmful") ? 1.25f : 1.0f;
+
+			float powerFactor = ingredientMult
+				* (1.0f + (skillFactor - 1.0f) * perks.AlchemySkill / 100.0f)
+				* (1.0f + perks.FortifyAlchemy / 100.0f)
+				* (1.0f + perks.AlchemistPerk / 100.0f)
+				* physicianPerkMultiplier * benefactorPerkMultiplier * poisonerPerkMultiplier;
+
+			return powerFactor;
+		}
+
+		internal PotionEffect GetPotionEffect(IngredientEffect ingredientEffect, PerkConfiguration perks)
+        {
+			var powerFactor = GetPowerFactor(ingredientEffect, perks);
+
+			float magnitude = ingredientEffect.magicEffect.noMagnitude ? 0 : ingredientEffect.magnitude;
+			var magnitudeFactor = ingredientEffect.magicEffect.powerAffectsMag ? powerFactor : 1.0f;
+			magnitude *= magnitudeFactor;
+
+			float duration = ingredientEffect.magicEffect.noDuration ? 0 : ingredientEffect.duration;
+			var durationFactor = ingredientEffect.magicEffect.powerAffectsDur ? powerFactor : 1.0f;
+			duration *= durationFactor;
+
+			//magnitudeFactor = 1; //Used in the wiki calculations
+			//if (magnitude < 0) magnitudeFactor = magnitude;
+			//durationFactor = 1; //Used in the wiki calculations
+			//if (duration < 0) durationFactor = duration / 10.0f;
+
+			var durationCost = Math.Pow(durationFactor, 1.1);
+			var magnitudeCost = Math.Pow(Math.Round(magnitudeFactor), 1.1);
+			var value = ingredientEffect.value * magnitudeCost * durationCost;
+
+			return new PotionEffect(ingredientEffect: ingredientEffect,
+				magnitude: ingredientEffect.magicEffect.noMagnitude ? 0 : (int)Math.Floor(magnitude),
+				duration: ingredientEffect.magicEffect.noDuration ? 0 : (int)Math.Floor(duration));
+        }
 
 		public class PotionEffect
 		{
 			private readonly MagicEffect _magicEffect;
 			private readonly IngredientEffect _alchemyEffect;
+			public readonly int Magnitude, Duration;
 
-			internal PotionEffect(IngredientEffect ingredientEffect)
+			internal PotionEffect(IngredientEffect ingredientEffect, int magnitude = 0, int duration = 0)
 			{
 				_alchemyEffect = ingredientEffect;
 				_magicEffect = MagicEffect.GetMagicEffect(ingredientEffect.name);
 
-				//this.name = ingredientEffect.name;
-				//this.description = magicEffect.Description;
-
-				//this.magnitude = ingredientEffect.magnitude;
-				//this.duration = ingredientEffect.duration;
-				//this.value = ingredientEffect.value;
-
-				//this.Beneficial = magicEffect.beneficial;
-				//this.Poisonous = magicEffect.poisonous;
-				//this.PowerAffectsMagnitude = magicEffect.powerAffectsMag;
-				//this.PowerAffectsDuration = magicEffect.powerAffectsDur;
+				Magnitude = magnitude;
+				Duration = duration;
 			}
 			public string Name => _alchemyEffect.name;
 			public string Description => _magicEffect.Name;
