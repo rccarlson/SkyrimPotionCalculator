@@ -84,6 +84,8 @@ namespace PotionAPI
 			}
 		}
 
+		public bool HasKeyword(string keyword) => keywords.Contains(keyword);
+
 		/// <summary>
 		/// Fetch a <see cref="MagicEffect"/> based on name
 		/// </summary>
