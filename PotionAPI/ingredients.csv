@@ -73,16 +73,16 @@ Nightshade,Damage Health,2,1,0,Damage Magicka Regen,100,5,36,Lingering Damage St
 Nirnroot,Damage Health,2,0,6,Damage Stamina,3,0,6,Invisibility,0,4,36,Resist Magic,1,60,7,0.2,10,Near water
 Nordic Barnacle,Damage Magicka,3,0,7,Waterbreathing,0,5,13,Regenerate Health,5,300,24,Fortify Pickpocket,4,60,16,0.2,5,Underwater
 Orange Dartwing,Restore Stamina,5,0,3,Ravage Magicka,2,10,2,Fortify Pickpocket,4,60,16,Lingering Damage Health,1,10,12,0.1,1,Hovering above water
-Pearl,Restore Stamina,5,0,3,Fortify Block,4,60,16,Restore Magicka,5,0,3,Resist Shock,3,60,12,0.1,2,Satchels; Alchemy Laboratory of a Homestead  Pearl Oysterà
+Pearl,Restore Stamina,5,0,3,Fortify Block,4,60,16,Restore Magicka,5,0,3,Resist Shock,3,60,12,0.1,2,Satchels; Alchemy Laboratory of a Homestead Pearl Oyster
 Pine Thrush Egg,Restore Stamina,5,0,3,Fortify Lockpicking,2,30,3,Weakness to Poison,2,30,7,Resist Shock,3,60,12,0.5,2,Nests in forests
 Poison Bloom,Damage Health,3,1,0,Slow,50,5,34,Fortify Carry Weight,4,300,29,Fear,1,30,16,0.3,5,Darkfall Cave
-Powdered Mammoth Tusk,Restore Stamina,5,0,3,Fortify Sneak,4,60,16,Weakness to Fire,3,30,6,Fear,1,30,16,0.1,2,"Giant Camps, Alchemy Laboratory of a Homestead "
+Powdered Mammoth Tusk,Restore Stamina,5,0,3,Fortify Sneak,4,60,16,Weakness to Fire,3,30,6,Fear,1,30,16,0.1,2,"Giant Camps, Alchemy Laboratory of a Homestead"
 Purple Mountain Flower,Restore Stamina,5,0,3,Fortify Sneak,4,60,16,Lingering Damage Magicka,1,10,10,Resist Frost,3,60,12,0.1,2,Mountain flower clumps
 Red Mountain Flower,Restore Magicka,5,0,3,Ravage Magicka,2,10,2,Fortify Magicka,4,60,9,Damage Health,2,1,0,0.1,2,Mountain flower clumps
 River Betty,Damage Health,5,0,17,Fortify Alteration,4,60,6,Slow,50,5,34,Fortify Carry Weight,4,300,29,0.3,15,"Lakes, rivers, streams and fish barrels"
 Rock Warbler Egg,Restore Health,5,0,2,Fortify One-Handed,4,60,16,Damage Stamina,3,0,6,Weakness to Magic,2,30,7,0.5,2,Rock Warbler Nest
 Sabre Cat Tooth,Restore Stamina,5,0,3,Fortify Heavy Armor,2,60,7,Fortify Smithing,4,30,11,Weakness to Poison,2,30,7,0.1,2,"Sabre Cat, Snowy Sabre Cat"
-Salmon Roe,Restore Stamina,2,0,1,Waterbreathing,0,60,215,Fortify Magicka,50,5,10,Regenerate Magicka,5,300,24,0.2,5,"Salmon jumping up falls, Kitchen of a Homestead "
+Salmon Roe,Restore Stamina,2,0,1,Waterbreathing,0,60,215,Fortify Magicka,50,5,10,Regenerate Magicka,5,300,24,0.2,5,"Salmon jumping up falls, Kitchen of a Homestead"
 Salt Pile,Weakness to Magic,2,30,7,Fortify Restoration,4,60,16,Slow,50,5,34,Regenerate Magicka,5,300,24,0.2,2,"Merchants, containers, near cooking places"
 Scaly Pholiota,Weakness to Magic,2,30,7,Fortify Illusion,4,60,13,Regenerate Stamina,5,300,24,Fortify Carry Weight,4,300,29,0.3,4,Dead birch trees
 Scathecraw,Ravage Health,2,10,0,Ravage Stamina,2,10,3,Ravage Magicka,2,10,2,Lingering Damage Health,1,10,12,0.1,1,Harvested all over Solstheim
@@ -91,7 +91,7 @@ Skeever Tail,Damage Stamina Regen,100,5,22,Ravage Health,2,10,0,Damage Health,2,
 Slaughterfish Egg,Resist Poison,4,60,16,Fortify Pickpocket,4,60,16,Lingering Damage Health,1,10,12,Fortify Stamina,4,60,9,0.2,3,Underwater
 Slaughterfish Scales,Resist Frost,3,60,12,Lingering Damage Health,1,10,12,Fortify Heavy Armor,2,60,7,Fortify Block,4,60,16,0.1,3,Slaughterfish
 Small Antlers,Weakness to Poison,2,30,7,Fortify Restoration,4,60,16,Lingering Damage Stamina,1,10,1,Damage Health,2,1,0,0.1,2,Elk
-Small Pearl,Restore Stamina,5,0,3,Fortify One-Handed,4,60,16,Fortify Restoration,4,60,16,Resist Frost,3,60,12,0.1,2,Pearl Oysterà
+Small Pearl,Restore Stamina,5,0,3,Fortify One-Handed,4,60,16,Fortify Restoration,4,60,16,Resist Frost,3,60,12,0.1,2,Pearl Oyster
 Snowberries,Resist Fire,3,60,12,Fortify Enchanting,1,30,2,Resist Frost,3,60,12,Resist Shock,3,60,12,0.1,4,"Snowberry bush, snowy areas"
 Spawn Ash,Ravage Stamina,2,10,3,Resist Fire,3,60,12,Fortify Enchanting,1,30,2,Ravage Magicka,2,10,2,0.1,20,Ash Spawn
 Spider Egg,Damage Stamina,3,0,6,Damage Magicka Regen,100,5,36,Fortify Lockpicking,2,30,3,Fortify Marksman,4,60,16,0.2,5,Spider lairs
