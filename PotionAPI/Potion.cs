@@ -134,6 +134,7 @@ namespace PotionAPI
 				duration: ingredientEffect.magicEffect.noDuration ? 0 : (int)Math.Floor(duration));
         }
 
+		[DebuggerDisplay("{Name,nq}")]
 		public class PotionEffect
 		{
 			private readonly MagicEffect _magicEffect;
