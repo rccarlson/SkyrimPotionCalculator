@@ -27,12 +27,10 @@ namespace PotionTests
 		public void CustomPotionTest()
 		{
 			Potion potion = new Potion(new Ingredient[] {
-				Ingredient.GetIngredient("Purple Mountain Flower"),
-				Ingredient.GetIngredient("Thistle Branch")
-			}, perks: new PerkConfiguration(AlchemySkill: 100, FortifyAlchemy: 1194248));
-			//Value: 485
-			//Magnitude: 100
-			//Duration: 34
+				Ingredient.GetIngredient("Canis Root"),
+				Ingredient.GetIngredient("Imp Stool")
+			},
+			perks: new PerkConfiguration(AlchemySkill: 100, FortifyAlchemy: 329820352, AlchemistPerk: 100, PhysicianPerk: true, BenefactorPerk: true, PoisonerPerk: true, SeekerOfShadows: true));
 		}
 
 		[TestMethod]
