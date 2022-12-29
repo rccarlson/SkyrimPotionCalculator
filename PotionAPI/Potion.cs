@@ -13,8 +13,8 @@ namespace PotionAPI
 	[DebuggerDisplay("{Name,nq}")]
 	public class Potion
 	{
-		const float ingredientMult = 4.0f,
-			skillFactor = 1.5f;
+		const float IngredientMult = 4.0f,
+			SkillFactor = 1.5f;
 
 		public readonly Ingredient[] ingredients;
 		public readonly List<IngredientEffect> ingredientEffects;
@@ -68,13 +68,10 @@ namespace PotionAPI
             get
             {
 				if (!IsValid) return "Invalid Potion";
-
-				StringBuilder builder = new StringBuilder();
-				if (IsPotion)	builder.Append("Potion of ");
-				else			builder.Append("Poison of ");
-				builder.Append(highestValueEffect.name);
-				return builder.ToString();
-            }
+				
+				if (IsPotion) return $"Potion of {highestValueEffect.name}";
+				else return $"Poison of {highestValueEffect.name}";
+			}
         }
 		public string Description
         {
@@ -86,21 +83,30 @@ namespace PotionAPI
 
 		internal float GetPowerFactor(IngredientEffect ingredientEffect, PerkConfiguration perks)
         {
-			float physicianPerkMultiplier = perks.PhysicianPerk
-					&& (ingredientEffect.name == "Restore Health"
-					|| ingredientEffect.name == "Restore Magicka"
-					|| ingredientEffect.name == "Restore Stamina") ? 1.25f : 1.0f;
+			float physicianPerkMultiplier =
+				perks.PhysicianPerk
+				&& (ingredientEffect.name == "Restore Health"
+				||  ingredientEffect.name == "Restore Magicka"
+				||  ingredientEffect.name == "Restore Stamina")
+				? 1.25f : 1.0f;
 
-			float benefactorPerkMultiplier = perks.BenefactorPerk
+			float benefactorPerkMultiplier =
+				perks.BenefactorPerk
 				&& IsPotion
-				&& ingredientEffect.magicEffect.beneficial ? 1.25f : 1.0f;
+				&& ingredientEffect.magicEffect.beneficial
+				? 1.25f : 1.0f;
 
-			float poisonerPerkMultiplier = perks.PoisonerPerk
+			float poisonerPerkMultiplier =
+				perks.PoisonerPerk
 				&& IsPoison
-				&& ingredientEffect.magicEffect.HasKeyword("MagicAlchHarmful") ? 1.25f : 1.0f;
+				&& ingredientEffect.magicEffect.HasKeyword("MagicAlchHarmful")
+				? 1.25f : 1.0f;
 
-			float powerFactor = ingredientMult
-				* (1.0f + (skillFactor - 1.0f) * perks.AlchemySkill / 100.0f)
+			Debug.Assert(!(benefactorPerkMultiplier > 1.0f && poisonerPerkMultiplier > 1.0f),
+				$"Both benefactor and poisoner perks were applied to ingredient effect '{ingredientEffect.name}'");
+
+			float powerFactor = IngredientMult
+				* (1.0f + (SkillFactor - 1.0f) * perks.AlchemySkill / 100.0f)
 				* (1.0f + perks.FortifyAlchemy / 100.0f)
 				* (1.0f + perks.AlchemistPerk / 100.0f)
 				* physicianPerkMultiplier * benefactorPerkMultiplier * poisonerPerkMultiplier;
@@ -115,6 +121,7 @@ namespace PotionAPI
 			float magnitude = ingredientEffect.magicEffect.noMagnitude ? 0 : ingredientEffect.magnitude;
 			var magnitudeFactor = ingredientEffect.magicEffect.powerAffectsMag ? powerFactor : 1.0f;
 			magnitude *= magnitudeFactor;
+			magnitude = (float)Math.Round(magnitude);
 
 			float duration = ingredientEffect.magicEffect.noDuration ? 0 : ingredientEffect.duration;
 			var durationFactor = ingredientEffect.magicEffect.powerAffectsDur ? powerFactor : 1.0f;
@@ -125,29 +132,38 @@ namespace PotionAPI
 			//durationFactor = 1; //Used in the wiki calculations
 			//if (duration < 0) durationFactor = duration / 10.0f;
 
+			var magnitudeFactor2 = 1.0f;
+			if (magnitude > 0) magnitudeFactor2 = magnitude;
+			var durationFactor2 = 1.0f;
+			//if (duration > 0) durationFactor2 = duration / 10.0f;
+			var value2 = ingredientEffect.value * Math.Pow(magnitudeFactor2 * durationFactor2, 1.1f);
+
+			var magnitudeCost = Math.Pow(magnitudeFactor, 1.1);
 			var durationCost = Math.Pow(durationFactor, 1.1);
-			var magnitudeCost = Math.Pow(Math.Round(magnitudeFactor), 1.1);
 			var value = ingredientEffect.value * magnitudeCost * durationCost;
 
 			return new PotionEffect(ingredientEffect: ingredientEffect,
 				magnitude: ingredientEffect.magicEffect.noMagnitude ? 0 : (int)Math.Floor(magnitude),
-				duration: ingredientEffect.magicEffect.noDuration ? 0 : (int)Math.Floor(duration));
+				duration: ingredientEffect.magicEffect.noDuration ? 0 : (int)Math.Floor(duration),
+				value: 0.0f);
         }
 
 		[DebuggerDisplay("{Name,nq}")]
-		public class PotionEffect
+		public struct PotionEffect
 		{
 			private readonly MagicEffect _magicEffect;
 			private readonly IngredientEffect _alchemyEffect;
 			public readonly int Magnitude, Duration;
+			public readonly float Value;
 
-			internal PotionEffect(IngredientEffect ingredientEffect, int magnitude = 0, int duration = 0)
+			internal PotionEffect(IngredientEffect ingredientEffect, int magnitude = 0, int duration = 0, float value = 0)
 			{
 				_alchemyEffect = ingredientEffect;
 				_magicEffect = MagicEffect.GetMagicEffect(ingredientEffect.name);
 
 				Magnitude = magnitude;
 				Duration = duration;
+				Value = value;
 			}
 			public string Name => _alchemyEffect.name;
 			public string Description => _magicEffect.Name;
